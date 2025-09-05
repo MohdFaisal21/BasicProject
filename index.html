@@ -3,71 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porfile Share Modal</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
 </head>
     <body>
-        <div class="circle1"></div>
-        <div class="circle2"></div>
+        <div class="container">
+            <h1>Possword Generator</h1>
 
-        <div class="wrapper">
-            <div class="card-wrapper">
-                <div>
-                    <img src="MyImage.jpg" width="50px" alt="Faisal">
-                </div>
-                <div class="username">
-                    <h2>Mohd Faisal</h2>
-                </div>
-                <div class="designation">
-                    <h3>Student</h3>
-                </div>
-                <div>
-                    <div class="bottom-group">
-                        <button onclick="openMode()" class="btn-share btn-card">
-                            <i class="fa-solid fa-share-from-square"></i>
-                            <div>share my profile</div>
-                        </button>
-                        <button class="btn-follow btn-card">Follow me</button>
-                    </div>
-                </div>
+
+            <div class="display-container">
+
+                <input class="display" placeholder="Password" readonly data-passwordDisplay>
+                <button>
+                    <span data-copyMsg></span>
+                    <i class="fa-regular fa-copy "></i>
+                </button>
             </div>
-            <!-- Modal Component -->
-            <div class="modal">
-                <div class="modal-header">
-                    <h1>Share My Profile</h1>
-                    <div>
-                        <i onclick="closeModal()" class="fa-solid fa-xmark close"></i>
-                    </div>
-                </div>
 
-                <div>
-                    <h3>Share this via</h3>
-                    <div class="icon-container">
-                        <a href="#" class="icon" id="facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        
-                        <a href="#" class="icon" id="twitter">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        
-                        <a href="#" class="icon" id="instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        
-                        <a href="#" class="icon" id="whatsapp">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                        
-                        <a href="#" class="icon" id="telegram">
-                            <i class="fa-brands fa-telegram"></i>
-                        </a>
-                    </div>
+            <div class="input-Container">
+                <!-- password length selection -->
+                <div class="length-container">
+                    <p>Password Length</p>
+                    <p data-lengthNumber>0</p>
                 </div>
+                <!-- length slider -->
+                <input type="range" step="1" min="1" max="20" class="slider" data-lengthSlider>
+                <!-- checkboxes -->
+                <div>
+                    <input type="checkbox" id="upperCase">
+                    <label for="upperCase">Includes UpperCase letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="lowerCase">
+                    <label for="lowerCase">Includes LowerCase letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="numbers">
+                    <label for="numbers">Includes numbers</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="symbols">
+                    <label for="symbols">Includes Symbols</label>
+                </div>
+                <!-- Strenth Section -->
+                <div class="strength-container">
+                    <p>Strength</p>
+                    <div data-indicator></div>
+                </div>
+                <!-- generates password -->
+                 <button>GENERATE PASSWORD</button>
             </div>
         </div>
-        <!-- Overlay -->
-        <div class="overlay" onclick="closeModal()"></div>
     </body>
 </html>
