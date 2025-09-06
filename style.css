@@ -29,7 +29,7 @@ body{
 .buttons{
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 360px;
 }
 
@@ -41,17 +41,26 @@ body{
     background-color: #0ff;
     padding: 12px 24px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .start{
-    background-color: #0f0;
+    background-color: #00f000;
 }
 
 .pause{
-    background-color: #f00;
+    background-color: #f00000;
+    display: none;
 }
 
 .reset{
-    background-color: #00f;
+    background-color: #0000f0;
+    display: none;
 }
 
+.display{
+    display: block;
+}
+.hidden{
+    display: none;
+}
